@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Drive Mad — HTML Canvas Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <h1>Drive Mad</h1>
+      <p class="muted">Dodge traffic, collect fuel, survive as long as you can!</p>
+    </header>
+
+    <main class="card">
+      <div class="game-area">
+        <canvas id="gameCanvas" width="480" height="720" aria-label="Drive Mad game canvas"></canvas>
+
+        <!-- Overlay UI -->
+        <div class="hud">
+          <div>Score: <span id="score">0</span></div>
+          <div>High: <span id="highscore">0</span></div>
+          <div>Speed: <span id="speed">1</span></div>
+        </div>
+
+        <div class="controls-mobile" id="mobileControls">
+          <button id="leftBtn" class="control">◀</button>
+          <button id="rightBtn" class="control">▶</button>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="row">
+          <button id="startBtn" class="primary">Start Game</button>
+          <button id="pauseBtn">Pause</button>
+          <button id="restartBtn" class="secondary">Restart</button>
+        </div>
+
+        <div class="info">
+          <p>Controls: ← / → keys or on-screen buttons. Avoid red cars. Collect green fuel for +speed/score. The road gets faster over time.</p>
+        </div>
+
+        <div id="gameOver" class="gameover hidden card">
+          <h2>Game Over</h2>
+          <p>Your score: <strong id="finalScore">0</strong></p>
+          <button id="tryAgain" class="primary">Try Again</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="muted small">Built with HTML5 Canvas • Host on GitHub Pages</footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
